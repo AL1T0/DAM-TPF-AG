@@ -21,9 +21,9 @@ Continua con la descarga del código cuando tengas las dependencias instaladas y
 
 ### Ejecución de la aplicación
 
-Para ejecutar la aplicación, debes ejecutar el comando `docker compose up` desde la raíz del proyecto: `'app-fullstack-base-2022-i07/'`.
+Para ejecutar la aplicación, debes ejecutar el comando `docker compose up` desde la raíz del proyecto.
 
-Para iniciar el proyecto de Angular/Ionic, ejecuta el comando `ng serve` en el directorio `'app-fullstack-base-2022-i07/src/frontend/dam'`.
+Para iniciar el proyecto de Angular/Ionic, ejecuta el comando `ng serve` en el directorio `'/src/frontend/dam'`.
 
 Nota importante: si da un error por la instalación de Angular se debe ejecutar el comando `sudo npm install`. En algunas ocasiones, es posible que necesites usar privilegios de superusuario con `sudo ng serve`.
 
