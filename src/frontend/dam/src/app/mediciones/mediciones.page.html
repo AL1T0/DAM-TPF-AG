@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mediciones del dispositivo: {{this.dispositivoId}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-text-center">
+    <ion-row class="header-row">
+      <ion-col>
+        <ion-text>Fecha</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>Valor</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let mediciones of med">
+      <ion-col>
+        <ion-text>
+          {{mediciones.fecha | date:'medium'}}
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          {{mediciones.valor | unidad:"Presion"}}
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-button expand="block" shape="round"  (click)="return()">
+    <ion-icon slot="end" name="arrow-back"></ion-icon>
+  </ion-button>
+  <ion-button expand="block" shape="round"  routerLink="/home">
+    <ion-icon slot="end" name="home"></ion-icon>
+  </ion-button>
+
+</ion-content>

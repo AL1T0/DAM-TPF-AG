@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Sensor N°: {{dispositivos.dispositivoId}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="highcharts" style="width:100%; height:300px;"></div>
+  <br>
+  <ion-button expand="block" shape="round" (click)="changeValvStatus()"> 
+    <p *ngIf="!this.valvStatus || this.onErrorEV"> Abrir válvula</p>
+    <p *ngIf="this.valvStatus" > Cerrar válvula</p>
+  <ion-icon slot="start" name="swap-vertical"></ion-icon>
+</ion-button>
+  <ion-button expand="block" shape="round" routerLink="/mediciones/{{dispositivos.dispositivoId}}" >
+      <p >Mediciones</p>
+      <ion-icon slot="start" name="stats-chart"></ion-icon>
+  </ion-button>
+  <ion-button expand="block" shape="round" routerLink="/logs/{{dispositivos.dispositivoId}}">
+      <p>Log de riego</p>
+      <ion-icon slot="start" name="server"></ion-icon>
+  </ion-button>
+  <ion-button expand="block" shape="round"  routerLink="/home">
+    <p>Home</p>
+    <ion-icon slot="start" name="home"></ion-icon>
+  </ion-button>
+</ion-content>

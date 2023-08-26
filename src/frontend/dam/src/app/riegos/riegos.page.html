@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Log de riego de la válvula N° {{this.electrovalvulaId}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-text-center">
+    <ion-row class="header-row">
+      <ion-col>
+        <ion-text>Fecha</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>Estado</ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let log of logs" appMouseHover>
+      <ion-col>
+        <ion-text>
+          {{log.fecha  | date:'medium'}}
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          {{log.estado | estado}}
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+<br>
+<ion-button expand="block" shape="round"  (click)="return()">
+  <ion-icon slot="end" name="arrow-back"></ion-icon>
+</ion-button>
+<ion-button expand="block" shape="round"  routerLink="/home">
+  <ion-icon slot="end" name="home"></ion-icon>
+</ion-button>
+</ion-content>
